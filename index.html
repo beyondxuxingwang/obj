@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./obj.css">
+</head>
+<body>
+
+    <!-- <div class="container">
+        <ul class="ul-left">
+            <li>系统管理</li>
+            <li>部门经理</li>
+            <li>部门主管</li>
+            <li>销售经理</li>
+            <li>财务灰机</li>
+            <li>财务出纳</li>
+        </ul>
+        <ul class="middle">
+            <a href="">添加</a>
+            <a href="">删除</a>
+        </ul>
+        <ul class="ul-right">
+            
+        </ul>
+    </div> -->
+    
+
+    <button id="show">1243242323</button>
+    
+    <script src="../jquery-1.10.2.js"></script>
+    <script src="./obj.js"></script>
+    <script>
+        
+        var UserRole = new UserRole({
+            show:false,
+            data:[
+                {"value":1,"text":"部门经理1"},
+                {"value":2,"text":"销售主管"},
+                {"value":3,"text":"财务出纳"},
+                {"value":4,"text":"人事经理"},
+                {"value":5,"text":"部门主管"},
+                {"value":6,"text":"门卫"}
+            ],
+            onSave:function(){
+                console.log(this.getValue());
+                this.getValue();
+                this.hide();
+                
+            }
+        });
+        document.getElementById('show').onclick = function () {  
+            if(UserRole.status){
+                UserRole.show();
+            }else{
+                UserRole.hide();
+            }
+        }
+    
+    </script>
+</body>
+</html>
